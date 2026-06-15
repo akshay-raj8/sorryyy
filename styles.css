@@ -7,30 +7,25 @@
   --heading-slide-speed: 1.7s;
   --body-rise-speed: 2.1s;
   --bouquet-beat-speed: 4.8s;
-
   --ink-blue: #18009a;
   --paper-blue: #d8edf8;
   --nav-height: 48px;
   --background-image: url("https://sorryyydevika.my.canva.site/_assets/media/e13f4c72726385efffee8b068b7f1ddf.png");
 }
-
 * {
   box-sizing: border-box;
 }
-
 html,
 body {
   min-height: 100%;
   margin: 0;
 }
-
 body {
   color: #111;
   font-family: "Caveat", cursive;
   background: #fff;
   overflow-x: hidden;
 }
-
 .page::before {
   content: "";
   position: fixed;
@@ -41,7 +36,6 @@ body {
   background-repeat: no-repeat;
   background-size: max(100vw, 1265px) auto;
 }
-
 .site-nav {
   position: fixed;
   inset: 0 0 auto;
@@ -55,7 +49,6 @@ body {
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
-
 .site-nav a {
   color: #152036;
   font-size: 18px;
@@ -63,11 +56,9 @@ body {
   letter-spacing: 0;
   text-decoration: none;
 }
-
 .site-nav a.active {
   font-weight: 700;
 }
-
 .music-toggle {
   position: fixed;
   right: clamp(18px, 3vw, 34px);
@@ -84,11 +75,9 @@ body {
   font: 700 19px/1 "Caveat", cursive;
   cursor: pointer;
 }
-
 .music-toggle.is-playing {
   background: rgba(216, 237, 248, 0.9);
 }
-
 .music-pointer {
   position: fixed;
   right: clamp(52px, 5.2vw, 76px);
@@ -100,24 +89,20 @@ body {
   pointer-events: none;
   animation: arrowBlink 1.1s ease-in-out infinite;
 }
-
 .music-pointer b {
   display: inline-block;
   font-size: 44px;
   line-height: 1;
 }
-
 .stage {
   position: relative;
   min-height: 720px;
   padding-top: var(--nav-height);
 }
-
 .home-stage {
   display: grid;
   place-items: center;
 }
-
 .heart {
   position: absolute;
   color: var(--ink-blue);
@@ -128,30 +113,25 @@ body {
   opacity: 0.82;
   transform: rotate(-15deg);
 }
-
 .heart-a {
   left: 9vw;
   top: 19vh;
 }
-
 .heart-b {
   right: 9vw;
   top: 19vh;
   transform: rotate(-12deg);
 }
-
 .heart-c {
   left: 9vw;
   bottom: 8vh;
   transform: rotate(-20deg);
 }
-
 .heart-d {
   right: 9vw;
   bottom: 8vh;
   transform: rotate(-13deg);
 }
-
 .home-gift {
   position: relative;
   width: min(760px, 92vw);
@@ -161,7 +141,6 @@ body {
   text-decoration: none;
   display: block;
 }
-
 .curve-name {
   position: absolute;
   inset: -104px -13% auto;
@@ -171,7 +150,6 @@ body {
   overflow: visible;
   pointer-events: none;
 }
-
 .curve-name text {
   fill: var(--ink-blue);
   font-family: "Caveat", cursive;
@@ -179,17 +157,14 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
 }
-
 .curve-path {
   animation: curveSway var(--curve-sway-speed) ease-in-out infinite;
 }
-
 .bouquet {
   display: block;
   pointer-events: none;
   user-select: none;
 }
-
 .home-bouquet {
   position: absolute;
   z-index: 1;
@@ -202,11 +177,9 @@ body {
   animation: bouquetBeat var(--bouquet-beat-speed) ease-in-out 0.7s infinite;
   will-change: transform;
 }
-
 .bouquet-enter {
   opacity: 1;
 }
-
 .tap-note {
   position: absolute;
   left: calc(50% - 185px);
@@ -216,7 +189,6 @@ body {
   font-weight: 600;
   transform: rotate(-4deg);
 }
-
 .tap-arrow {
   position: absolute;
   left: calc(50% - 120px);
@@ -226,12 +198,10 @@ body {
   font-family: "Caveat", cursive;
   transform: rotate(18deg);
 }
-
 .reveal-home {
   opacity: 0;
   animation: fadeIn var(--home-reveal-speed) ease 0.45s forwards;
 }
-
 .bouquet-stage {
   min-height: 720px;
   display: grid;
@@ -240,7 +210,6 @@ body {
   align-items: center;
   padding: 76px clamp(34px, 5vw, 64px) 34px;
 }
-
 .bouquet-stage h1 {
   position: absolute;
   top: 76px;
@@ -255,7 +224,6 @@ body {
   transform: translateX(-78px);
   animation: headingSlide var(--heading-slide-speed) cubic-bezier(0.2, 0.75, 0.2, 1) 0.25s forwards;
 }
-
 .bouquet-large {
   width: min(390px, 32vw);
   align-self: end;
@@ -264,7 +232,6 @@ body {
   animation: bouquetBeatLarge var(--bouquet-beat-speed) ease-in-out 1.2s infinite;
   will-change: transform;
 }
-
 .letter {
   max-width: 760px;
   margin: 118px 0 0;
@@ -276,23 +243,19 @@ body {
   transform: translateY(54px);
   animation: bodyRise var(--body-rise-speed) cubic-bezier(0.2, 0.75, 0.2, 1) 0.75s forwards;
 }
-
 .pink-heart {
   color: #ff4fa0;
   filter: saturate(1.2);
 }
-
 .reveal-bouquet {
   opacity: 1;
 }
-
 @keyframes revealIn {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
-
 @keyframes bouquetEnter {
   from {
     opacity: 0;
@@ -303,7 +266,6 @@ body {
     transform: translate3d(-50%, -33%, 0) scale(1);
   }
 }
-
 @keyframes bouquetBeat {
   0%,
   100% {
@@ -315,7 +277,6 @@ body {
     transform: translate3d(-50%, -33%, 0) scale(1.075);
   }
 }
-
 @keyframes bouquetBeatLarge {
   0%,
   100% {
@@ -325,13 +286,11 @@ body {
     transform: scale(1.075);
   }
 }
-
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
-
 @keyframes curveSway {
   0%,
   100% {
@@ -341,85 +300,69 @@ body {
     transform: translateX(16px);
   }
 }
-
 @keyframes headingSlide {
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
-
 @keyframes bodyRise {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 @media (max-width: 760px) {
   :root {
     --nav-height: 46px;
   }
-
   .page::before {
     background-size: auto 100%;
   }
-
   .stage {
     min-height: 100svh;
   }
-
   .heart {
     font-size: 58px;
   }
-
   .heart-a,
   .heart-c {
     left: 6vw;
   }
-
   .heart-b,
   .heart-d {
     right: 6vw;
   }
-
   .home-gift {
     width: 96vw;
     height: 560px;
     min-height: 520px;
   }
-
   .curve-name {
     inset: -82px -17vw auto;
     width: 132vw;
     height: 108%;
   }
-
   .curve-name text {
     font-size: 48px;
   }
-
   .home-bouquet {
     top: 55%;
     width: min(276px, 64vw);
   }
-
   .tap-note {
     left: calc(50% - 130px);
     top: 74%;
   }
-
   .tap-arrow {
     left: calc(50% - 72px);
   }
-
   .bouquet-stage {
     display: block;
     min-height: auto;
     padding: 78px 22px 86px;
     text-align: left;
   }
-
   .bouquet-stage h1 {
     position: relative;
     top: auto;
@@ -427,19 +370,16 @@ body {
     font-size: clamp(66px, 18vw, 94px);
     margin-bottom: 0;
   }
-
   .bouquet-large {
     width: min(285px, 72vw);
     margin: -4px 0 10px;
   }
-
   .letter {
     margin: 0;
     max-width: 100%;
     font-size: clamp(29px, 8.4vw, 40px);
     line-height: 1.26;
   }
-
   .music-toggle {
     left: 50%;
     right: auto;
@@ -450,30 +390,25 @@ body {
     padding: 6px 14px;
     font-size: 18px;
   }
-
   .music-pointer {
     left: 50%;
     right: auto;
     top: calc(var(--nav-height) + 46px);
     transform: translateX(-50%);
   }
-
   .music-pointer b {
     font-size: 38px;
   }
 }
-
 @media (min-width: 761px) and (max-width: 1024px) {
   .music-toggle {
     right: 22px;
     top: calc(var(--nav-height) + 12px);
   }
-
   .music-pointer {
     right: 58px;
   }
 }
-
 @keyframes arrowBlink {
   0%,
   100% {

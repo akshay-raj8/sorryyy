@@ -1,6 +1,5 @@
 const audio = document.querySelector("#bg-music");
 const musicButton = document.querySelector(".music-toggle");
-
 if (audio && musicButton) {
   musicButton.addEventListener("click", async () => {
     if (audio.paused) {
