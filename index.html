@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="page home-page">
+    <audio id="bg-music" src="music.mp3" loop preload="none"></audio>
+    <button class="music-toggle" type="button" aria-pressed="false">Play music</button>
+    <div class="music-pointer" aria-hidden="true">
+      <b>&#8593;</b>
+    </div>
+
+    <header class="site-nav" aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="bouquet.html">Bouquet</a>
+    </header>
+
+    <main class="stage home-stage">
+      <span class="heart heart-a" aria-hidden="true">&#9825;</span>
+      <span class="heart heart-b" aria-hidden="true">&#9825;</span>
+      <span class="heart heart-c" aria-hidden="true">&#9825;</span>
+      <span class="heart heart-d" aria-hidden="true">&#9825;</span>
+
+      <a class="home-gift reveal-home" href="bouquet.html" aria-label="Open bouquet page">
+        <svg class="curve-name" viewBox="-120 0 1060 520" aria-hidden="true">
+          <defs>
+            <path id="nameCurve" d="M -20 360 C 120 52, 690 52, 840 360"></path>
+          </defs>
+          <text>
+            <textPath class="curve-path" href="#nameCurve" startOffset="0%">
+              Devikeee sorryyy, Vazhakk Maatuo?..
+              <animate attributeName="startOffset" values="0%;5%;0%" dur="9s" repeatCount="indefinite"></animate>
+            </textPath>
+          </text>
+        </svg>
+        <img class="bouquet home-bouquet bouquet-enter" src="https://sorryyydevika.my.canva.site/_assets/media/734c7dc7b6190e1dd677f7a4b976fa4c.png" alt="">
+        <span class="tap-note">tap here</span>
+        <span class="tap-arrow" aria-hidden="true">&#8600;</span>
+      </a>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
